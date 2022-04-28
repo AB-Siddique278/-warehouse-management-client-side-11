@@ -6,6 +6,7 @@ import auth from "../../firebase.init";
 
 
 
+
 const SignUp = () => {
     
     
@@ -99,6 +100,7 @@ const SignUp = () => {
                     Alrady have an account <Link to="/login"> Login Now</Link>
                 </p>
                 <hr />
+               
                 
             </div>
         </div>
