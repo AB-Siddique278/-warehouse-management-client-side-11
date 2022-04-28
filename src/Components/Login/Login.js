@@ -4,6 +4,7 @@ import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -70,23 +71,25 @@ const Login = () => {
                         loading && <p>Loading...</p>
                     }
                     <Button variant="primary" type="submit">
-                        Submit
+                        Login
                     </Button>
                 </Form>
                 <Button onClick={handlepass} variant="link"> Forgat password</Button>
                 <p>
-                    Dream Pictures <Link to="/signup">Create a account</Link>
+                    Fruits Basket <Link to="/signup">Create a account</Link>
                 </p>
                 <hr />
 
                
 
-
+                <SocialLogin></SocialLogin>
               
 
 
 
             </div>
+
+            
         </div>
 
     );

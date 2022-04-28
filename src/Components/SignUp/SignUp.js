@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 
@@ -93,14 +94,14 @@ const SignUp = () => {
                         {error}
                     </p>
                     <Button variant="primary" type="submit">
-                        Submit
+                        SignUp
                     </Button>
                 </Form>
                 <p>
                     Alrady have an account <Link to="/login"> Login Now</Link>
                 </p>
                 <hr />
-               
+               <SocialLogin></SocialLogin>
                 
             </div>
         </div>

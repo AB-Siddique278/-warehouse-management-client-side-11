@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import auth from './firebase.init';
-
+import auth from '../../firebase.init';
+import './SocialLogin.css'
 const SocialLogin = () => {
     const [signInWithGoogle, loading, error] = useSignInWithGoogle(auth);
     const [user]=useAuthState(auth);
@@ -10,18 +10,24 @@ const SocialLogin = () => {
     let errorElement;
 
     if (error) {
-             
+        
+        
         errorElement = <div>
                 <p className='text-danger'>Error: {error.message}</p>
             </div>
         
     }
    
+
     useEffect(()=>{
 
+
+
         if(user){
-            navigate('/servicedetail');
+            navigate('/home');
         }
+    
+
 
     },[user])
 
@@ -33,12 +39,31 @@ const SocialLogin = () => {
         <div>
             {errorElement}
 
-            <button onClick={() => signInWithGoogle()} className="row">
-                <div className="col-md-12 google-btn">
-                    <div className="btn-google btn-block text-uppercase btn-outline" href="#">
-                        <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" /> Signup Using Google</div>
+            <button onClick={() => signInWithGoogle()} className="row g-button">
+            <div className="col-md-12 ">
+                    <div className="g-image">
+
+
+                        <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" />
+                        
+                        
+                         Signup Using Google
+                        
+                        
+                    </div>
                 </div>
             </button>
+
+
+
+
+
+
+
+
+
+
+
 
 
         </div>
