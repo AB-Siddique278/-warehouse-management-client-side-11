@@ -1,11 +1,14 @@
+import { signOut } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 import Customlink from "../Link/Customelink";
 import './Header.css'
 
 const Header = () => {
-    // const [user] = useAuthState(auth)
-    // const handleSignOut = () =>{
-    //     signOut(auth);
-    // }
+    const [user] = useAuthState(auth)
+    const handleSignOut = () =>{
+        signOut(auth);
+    }
     return (
         <div>
              <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,12 +23,12 @@ const Header = () => {
                         <Customlink to="/blog">Blogs</Customlink>
                         <Customlink to="/about">About</Customlink>
                         
-                        {/* { 
+                        { 
                             user?
                             <button onClick={handleSignOut} className="btn btn-warning bt">Sign out</button>
                             :
                              <Customlink to="/login">Login</Customlink> 
-                        } */}
+                        }
                         
                         </div>
                     </div>
