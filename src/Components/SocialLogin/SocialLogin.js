@@ -24,7 +24,7 @@ const SocialLogin = () => {
 
 
         if(user){
-            navigate('/home');
+            navigate('/updateInventory');
         }
     
 

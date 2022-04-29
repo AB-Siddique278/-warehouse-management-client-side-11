@@ -1,0 +1,59 @@
+[
+    {
+      "_id": "1",
+      "name": "Wedding photography",
+      "price": 150,
+      "quantity": 150,
+      "sname": "Wedding photography",
+      "detail": "Bangladesh is a beautiful country and a professional photographer is sure to have ideas about the best wedding photography locations. Sundarbans Mangrove Forest",
+      "picture": "https://images.pexels.com/photos/2286400/pexels-photo-2286400.jpeg"
+    },
+    {
+      "_id": "2",
+      "name": "Party",
+      "price": 200,
+      "quantity": 200,
+      "sname": "Party",
+      "detail": "Taking party photos is a great way to earn a living while having fun. There are three very important steps to party photography... we show you how!",
+      "picture": "https://images.pexels.com/photos/1787220/pexels-photo-1787220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "_id": "3",
+      "name": "Product Promotion",
+      "price": 350,
+      "quantity": 350,
+      "sname": "Party",
+      "detail": "Promoting your product with videos and photos is a critical piece to its success. Using this visual medium can help you create a promotional strategy. ",
+      "picture": "https://images.pexels.com/photos/2388569/pexels-photo-2388569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "_id": "4",
+      "name": "Model",
+      "price": 500,
+      "quantity": 500,
+      "sname": "Party",
+      "detail": "Hello, I am a professional freelance photographer and photo editor. I am using Photoshop CC and Lightroom for editing pictures. I have good experience.",
+      "picture": "https://images.pexels.com/photos/947785/pexels-photo-947785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "_id": "5",
+      "name": "Model",
+      "price": 500,
+      "quantity": 500,
+      "sname": "Party",
+      "detail": "Hello, I am a professional freelance photographer and photo editor. I am using Photoshop CC and Lightroom for editing pictures. I have good experience.",
+      "picture": "https://images.pexels.com/photos/947785/pexels-photo-947785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    
+    {
+      "_id": "6",
+      "name": "Model",
+      "price": 500,
+      "quantity": 500,
+      "sname": "Party",
+      "detail": "Hello, I am a professional freelance photographer and photo editor. I am using Photoshop CC and Lightroom for editing pictures. I have good experience.",
+      "picture": "https://images.pexels.com/photos/947785/pexels-photo-947785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+    
+    
+  ]

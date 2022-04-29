@@ -18,7 +18,7 @@ const Header = () => {
                     <div className="" id="navbarNavAltMarkup">
                         <div className="navbar-nav all-nav">
                         <Customlink to="/">Home</Customlink>
-                        <Customlink to="/servicedetail">Service</Customlink>
+                        <Customlink to="/inventory">Inventory</Customlink>
 
                         <Customlink to="/blog">Blogs</Customlink>
                         <Customlink to="/about">About</Customlink>
