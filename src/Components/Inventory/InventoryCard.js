@@ -1,9 +1,16 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate,} from 'react-router-dom';
 
 const InventoryCard = ({inventor}) => {
     const {name, _id, picture, detail, price, }= inventor;
+    const navigate = useNavigate();
+
+    const navigateToServiceDetail = id =>{
+        navigate(`/updateInventory/${_id}`);
+    }
+    
+  
     
     return (
         <div>
@@ -19,11 +26,17 @@ const InventoryCard = ({inventor}) => {
 
 
                         <Link to="/updateInventory">
+                        
+
+                        
+                        </Link> 
+                        <Button variant="primary" onClick={() => navigateToServiceDetail(_id)} >Update Inventory</Button>
 
 
-                            <Button variant="primary">Update Inventory</Button>
 
-                        </Link>
+                          
+
+                        
                     </div>
 
                 </div>

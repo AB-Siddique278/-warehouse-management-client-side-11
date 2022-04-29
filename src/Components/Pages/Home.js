@@ -6,7 +6,7 @@ const Home = () => {
     const [inventory, setInventory] =useState([])
     useEffect(()=>{
 
-        fetch('data.json')
+        fetch('http://localhost:5000/service')
         .then(response => response.json())
         .then(data => setInventory(data))
 

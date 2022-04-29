@@ -23,6 +23,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
 
         <Route path="/about" element={<About />} />
+
+        
         <Route path="/updateInventory" element={
            <RequireAuth>
            <InventoryUpdate></InventoryUpdate>
