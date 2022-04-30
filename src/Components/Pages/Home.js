@@ -10,13 +10,8 @@ const Home = () => {
         .then(response => response.json())
         .then(data => setInventory(data))
 
-
-
-
-
-
-
     },[])
+    
 
     return (
         <div >
