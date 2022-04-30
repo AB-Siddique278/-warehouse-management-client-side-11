@@ -7,8 +7,10 @@ import InventoryUpdate from './Components/Inventory/InventoryUpdate';
 import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
 import About from './Components/Pages/About';
+import AddItems from './Components/Pages/AddItems/AddItems';
 import Blog from './Components/Pages/Blog';
 import Home from './Components/Pages/Home';
+import ManageInventory from './Components/Pages/ManageInventory';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import SignUp from './Components/SignUp/SignUp';
 
@@ -19,26 +21,47 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/inventory" element={<Inventory />} />
+
         <Route path="/blog" element={<Blog />} />
 
         <Route path="/about" element={<About />} />
+        <Route path="/additems" element={<AddItems />} />
 
-        
-        <Route path="/updateInventory" element={
-           <RequireAuth>
-           <InventoryUpdate></InventoryUpdate>
-         </RequireAuth>
+        {/* <Route path="/manageInventory" element={<ManageInventory />} /> */}
+
+
+        <Route path="/inventory/:serviceId" element={
+          <RequireAuth>
+            <Inventory></Inventory>
+          </RequireAuth>
 
 
         } />
+
+
+        <Route path="/manageInventory" element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+
+
+        } />
+
+       
+
+
+
+
+
+
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
 
         <Route path="*" element={<NotFound />} />
 
       </Routes>
-      
+
     </div>
   );
 }

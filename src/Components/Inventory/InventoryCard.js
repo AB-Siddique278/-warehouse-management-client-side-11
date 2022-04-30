@@ -6,8 +6,8 @@ const InventoryCard = ({inventor}) => {
     const {name, _id, picture, detail, price, }= inventor;
     const navigate = useNavigate();
 
-    const navigateToServiceDetail = id =>{
-        navigate(`/updateInventory/${_id}`);
+    const navigateToServiceDetail = _id =>{
+        navigate(`/inventory/${_id}`);
     }
     
   
@@ -25,16 +25,16 @@ const InventoryCard = ({inventor}) => {
 
 
 
-                        <Link to="/updateInventory">
+                        {/* <Link to="/inventory">
+                        
+                        
+                        
+                        </Link>  */}
                         
 
-                        
-                        </Link> 
                         <Button variant="primary" onClick={() => navigateToServiceDetail(_id)} >Update Inventory</Button>
 
-
-
-                          
+                        {/* onClick={() => navigateToServiceDetail(_id)}   */}
 
                         
                     </div>

@@ -22,6 +22,8 @@ const Header = () => {
 
                         <Customlink to="/blog">Blogs</Customlink>
                         <Customlink to="/about">About</Customlink>
+
+                        <Customlink to="/manageInventory">ManageInv</Customlink>
                         
                         { 
                             user?
