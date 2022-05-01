@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Inventory = () => {
     const { serviceId } = useParams();
@@ -13,26 +13,77 @@ const Inventory = () => {
 
     }, [])
 
+
+    const handelUpdate = event =>{
+        event.preventDefault();
+        const quantity=event.target.quantity.value;
+
+        const items = {quantity};
+
+        const url = `http://localhost:5000/service${serviceId}`
+        fetch(url,{
+            method:'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(items)
+        })
+        .then(res => res.json())
+        .then(data  =>{
+            console.log('success', data);
+            alert('users added successfully!!');
+            event.target.reset();
+        })
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div>
             <h1>This is Inventory: {service.name} </h1>
             
-            <div class="card mb-3 w-50 mx-auto">
+            <div class="card mb-3 w-25 mx-auto" >
                 <img src={service.picture} alt="" />
                     <div class="card-body">
-                        <h5 class="card-title">{service.name}</h5>
-                        <p class="card-text">{service.detail}</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <h5 class="card-title">Name : {service.name}</h5>
+                        <p class="card-text">Details: {service.detail}</p>
+                        <p class="card-text">Quantity: {service.quantity}</p>
+                        
                     </div>
             </div>
            
 
 
 
+          
+
+            <h5>
+                service name: {service.quantity}
+            </h5>
+            <form onSubmit={handelUpdate}>
 
 
+                <input type="number" name='quantity' placeholder='Update Quantity' required />
+                <input type="submit" value="update Items" />
+            </form>
 
-
+           
 
         </div>
     );
