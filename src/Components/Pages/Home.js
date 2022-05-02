@@ -1,7 +1,13 @@
+
 import React, { useEffect, useState } from 'react';
 import InventoryCard from '../Inventory/InventoryCard';
 import "./Home.css"
 import { BeakerIcon, ChipIcon, CubeIcon, GlobeIcon, MenuIcon } from '@heroicons/react/solid'
+import { Carousel } from 'react-bootstrap';
+
+
+
+import Slider from "react-slick";
 
 const Home = () => {
     const [inventory, setInventory] = useState([])
@@ -12,6 +18,30 @@ const Home = () => {
             .then(data => setInventory(data))
 
     }, [])
+
+
+
+
+
+
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
+
+
+
+
+
+
+
+
+
+
+
 
 
     return (
@@ -80,7 +110,7 @@ const Home = () => {
 
             <section className='container'>
 
-<h1 className='text-center'>Other Services </h1>
+                <h1 className='text-center'>Other Services </h1>
 
 
                 <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -130,6 +160,41 @@ const Home = () => {
 
 
             </section>
+
+
+
+
+            <div>
+                <h3 className='text-center mb-5'> Our customer Review</h3>
+                <Slider {...settings}>
+                    <div>
+                        <div class=" text-center d-none d-md-block">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" className='wpx-100 img-round mgb-20 mx-auto' alt="" />
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div>
+                    <div class=" text-center d-none d-md-block">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" className='wpx-100 img-round mgb-20 mx-auto' alt="" />
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div>
+                    <div class=" text-center d-none d-md-block">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" className='wpx-100 img-round mgb-20 mx-auto' alt="" />
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                </Slider>
+
+            </div>
+
+
+
+
 
 
 

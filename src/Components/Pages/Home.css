@@ -1,3 +1,8 @@
+
+
+
+
+
 .product img{
    height: 500px;
    
@@ -6,4 +11,17 @@
 .icon{
    height: 50px;
    color: yellowgreen;
+}
+
+img {
+   border: 0;
+}
+.mgb-20, .mgb-20-all > * {
+   margin-bottom: 20px;
+}
+.wpx-100, .wpx-100-after:after {
+   width: 100px;
+}
+.img-round, .img-rel-round {
+   border-radius: 50%;
 }
