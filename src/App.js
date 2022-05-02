@@ -12,6 +12,7 @@ import UpdateItems from './Components/Pages/AddItems/UpdateItems';
 import Blog from './Components/Pages/Blog';
 import Home from './Components/Pages/Home';
 import ManageInventory from './Components/Pages/ManageInventory';
+import MyItems from './Components/Pages/MyItems';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import SignUp from './Components/SignUp/SignUp';
 
@@ -53,6 +54,7 @@ function App() {
 
 
     <Route path="/updateItems/:serviceId" element={<UpdateItems />} />
+    <Route path="/myitems" element={<MyItems />} />
 
 
 
