@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import InventoryCard from '../Inventory/InventoryCard';
 import "./Home.css"
+import { BeakerIcon, ChipIcon, CubeIcon, GlobeIcon, MenuIcon } from '@heroicons/react/solid'
 
 const Home = () => {
-    const [inventory, setInventory] =useState([])
-    useEffect(()=>{
+    const [inventory, setInventory] = useState([])
+    useEffect(() => {
 
         fetch('http://localhost:5000/service')
-        .then(response => response.json())
-        .then(data => setInventory(data))
+            .then(response => response.json())
+            .then(data => setInventory(data))
 
-    },[])
-    
+    }, [])
+
 
     return (
         <div >
@@ -55,17 +56,17 @@ const Home = () => {
                     <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center my-5'>
 
                         {
-                            inventory.map(inventor =>(
+                            inventory.map(inventor => (
                                 <InventoryCard
-                                key={inventor._id}
-                                inventor={inventor}
+                                    key={inventor._id}
+                                    inventor={inventor}
                                 ></InventoryCard>
 
 
 
                             ))
                         }
-                        
+
 
                     </div>
                 </div>
@@ -73,6 +74,74 @@ const Home = () => {
 
 
             </section>
+
+
+
+
+            <section className='container'>
+
+<h1 className='text-center'>Other Services </h1>
+
+
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="h-100">
+
+                            <div class="card-body">
+                                <ChipIcon className="icon" />
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class=" h-100">
+
+                            <div class="card-body">
+                                <CubeIcon className="icon" />
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a short card.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="h-100">
+
+                            <div class="card-body">
+                                <GlobeIcon className="icon" />
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="h-100">
+
+                            <div class="card-body">
+                                <MenuIcon className="icon" />
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
     );
