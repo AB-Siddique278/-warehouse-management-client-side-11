@@ -1,3 +1,4 @@
+import axios from "axios";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
@@ -30,9 +31,12 @@ const Login = () => {
     }
 
 
-    const handleSignInUser = event => {
+    const handleSignInUser = async event => {
         event.preventDefault();
-        signInWithEmailAndPassword(email, password)
+       await signInWithEmailAndPassword(email, password)
+       const {data} = await axios.post('http://localhost:5000/login', {email});
+       localStorage.getItem('accessToken', data.accessToken);
+       //navigate(from, { replace: true });
     }
     
     const handlepass=()=>{

@@ -24,12 +24,13 @@ const SocialLogin = () => {
 
 
         if(user){
-            navigate('/inventory');
+            navigate('/');
         }
     
 
 
     },[user])
+
 
     if (loading) {
         return <p>Loading...</p>;
