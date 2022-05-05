@@ -64,7 +64,7 @@ const SignUp = () => {
 
     return (
         <div>
-            <div className='w-50 mx-auto shadow p-3 mb-5 bg-body rounded mt-5'>
+            <div className='w-50 mx-auto mt-5'>
                 <h1>Sign Up</h1>
                 <Form onSubmit={handleCreateUser}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
