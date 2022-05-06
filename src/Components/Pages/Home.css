@@ -25,3 +25,7 @@ img {
 .img-round, .img-rel-round {
    border-radius: 50%;
 }
+.rating{
+   height: 30px;
+   color: goldenrod;
+}

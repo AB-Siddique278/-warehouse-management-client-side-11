@@ -19,6 +19,7 @@ const InventoryCard = ({inventor}) => {
                     <img src={picture} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
+                        
                         <h5>price:$ {price}</h5>
                         <p className="card-text">{detail}</p>
 
@@ -42,6 +43,9 @@ const InventoryCard = ({inventor}) => {
                 </div>
 
             </div>
+
+
+            
         </div>
     );
 };
