@@ -11,7 +11,7 @@ const ManageInventory = () => {
 
         const proceed = window.confirm("Are you deleat ?");
         if (proceed) {
-            const url = `http://localhost:5000/service/${id}`;
+            const url = `https://serene-reaches-38236.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

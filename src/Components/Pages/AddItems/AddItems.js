@@ -43,7 +43,7 @@ const AddItems = () => {
 
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/service`;
+        const url = `https://serene-reaches-38236.herokuapp.com/service`;
         fetch(url,{
                 method:'POST',
                 headers:{

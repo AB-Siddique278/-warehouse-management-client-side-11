@@ -1,39 +1,35 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import useServices from '../../Hooks/useServices';
 
-const AllItems = ({serviceItem}) => {
-    const {name, _id, picture, detail, price, }= serviceItem;
+const MyItemsCards = ({ myitem }) => {
+    const { name, _id, picture, detail, price, } = myitem;
 
-    const [services, setServices]= useServices();
+    const [services, setServices] = useServices();
 
-    const handleDelete = id =>{
+    const handleDelete = id => {
 
         const proceed = window.confirm("Are you deleat ?");
-        if(proceed){
+        if (proceed) {
             const url = `https://serene-reaches-38236.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data =>{
-                console.log(data);
-                const remaining =services.filter(serviceItem => serviceItem._id !== id);
-                setServices(remaining);
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = services.filter(serviceItem => serviceItem._id !== id);
+                    setServices(remaining);
+                })
 
         }
 
 
 
     }
-
-
-
     return (
         <div>
-            
-             
-
 
 
             <div className="col">
@@ -47,13 +43,13 @@ const AllItems = ({serviceItem}) => {
 
 
 
-                        
-                        
 
-                        <button className='btn btn-danger' onClick={() => handleDelete(serviceItem._id)}>Remove</button>
-                        
 
-                        
+
+                        <button className='btn btn-danger' onClick={() => handleDelete(myitem._id)}>Remove</button>
+
+
+
                     </div>
 
                 </div>
@@ -68,10 +64,8 @@ const AllItems = ({serviceItem}) => {
 
 
 
-
-
         </div>
     );
 };
 
-export default AllItems;
+export default MyItemsCards;

@@ -13,7 +13,7 @@ const Home = () => {
     const [inventory, setInventory] = useState([])
     useEffect(() => {
 
-        fetch('http://localhost:5000/service')
+        fetch('https://serene-reaches-38236.herokuapp.com/service')
             .then(response => response.json())
             .then(data => setInventory(data))
 
@@ -69,7 +69,7 @@ const Home = () => {
 
                         <div className=''>
 
-                            <img src="https://img.freepik.com/free-photo/fresh-fruits-isolated-white-background_144627-10547.jpg?t=st=1651178379~exp=1651178979~hmac=82ee058a3f8ee2b20db2fc445b6ec2030d40c4488513ab169cb2fa346c07358d&w=996" alt="" />
+                            <img className='img-fluid' src="https://img.freepik.com/free-photo/fresh-fruits-isolated-white-background_144627-10547.jpg?t=st=1651178379~exp=1651178979~hmac=82ee058a3f8ee2b20db2fc445b6ec2030d40c4488513ab169cb2fa346c07358d&w=996" alt="" />
 
                         </div>
                     </div>
@@ -108,7 +108,7 @@ const Home = () => {
 
 
 
-            <section className='container'>
+            <section className='container mb-5'>
 
                 <h1 className='text-center'>Other Services </h1>
 
@@ -164,21 +164,21 @@ const Home = () => {
 
 
 
-            <div>
+            <div className='mb-5'>
                 <h3 className='text-center mb-5'> Our customer Review</h3>
                 <Slider {...settings}>
                     <div>
                         <div class=" text-center d-none d-md-block">
                             <img src="https://bootdey.com/img/Content/avatar/avatar1.png" className='wpx-100 img-round mgb-20 mx-auto' alt="" />
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <h5>Nabeel Nasrullah</h5>
+                            <p className='w-50 mx-auto'>Fruits Basket has became the worst delivery platform.</p>
                         </div>
                     </div>
                     <div>
                     <div class=" text-center d-none d-md-block">
                             <img src="https://bootdey.com/img/Content/avatar/avatar1.png" className='wpx-100 img-round mgb-20 mx-auto' alt="" />
                             <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <p>You order your products to be delivered in the morning and they send it at night .,I think everyone should quit buying from Fruits Baskets then they will learn their lesson. Or everyone should keep returning the order if it is not in time .</p>
                         </div>
                     </div>
                     <div>
@@ -189,6 +189,7 @@ const Home = () => {
                         </div>
                     </div>
                 </Slider>
+                
 
             </div>
 
@@ -205,7 +206,7 @@ const Home = () => {
 
 
 
-
+                        
 
 
         </div>

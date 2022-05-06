@@ -5,7 +5,7 @@ const useServices = () =>{
     const [inventory, setInventory] =useState([])
     useEffect(()=>{
 
-        fetch('http://localhost:5000/service')
+        fetch('https://serene-reaches-38236.herokuapp.com/service')
         .then(response => response.json())
         .then(data => setInventory(data))
 

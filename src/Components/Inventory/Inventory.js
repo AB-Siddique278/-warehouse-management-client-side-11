@@ -6,7 +6,7 @@ const Inventory = () => {
     const [service, setService] = useState({});
     useEffect(() => {
 
-        const url = `http://localhost:5000/service${serviceId}`
+        const url = `https://serene-reaches-38236.herokuapp.com/service${serviceId}`
         fetch(url)
             .then(response => response.json())
             .then(data => setService(data))
@@ -20,7 +20,7 @@ const Inventory = () => {
 
         const items = {quantity};
 
-        const url = `http://localhost:5000/service${serviceId}`
+        const url = `https://serene-reaches-38236.herokuapp.com/service${serviceId}`
         fetch(url,{
             method:'PUT',
             headers:{
@@ -49,7 +49,7 @@ const Inventory = () => {
 //     console.log(makequantity);
 
 
-//     const url = `http://localhost:5000/service${serviceId}`
+//     const url = `https://serene-reaches-38236.herokuapp.com/service${serviceId}`
 //     fetch(url,{
 //         method:'PUT',
 //         headers:{
@@ -84,7 +84,7 @@ const handelDelevery = event =>{
     //  const myQuantaty = quantity-1;
     const items = {newQuantity};
 
-    const url = `http://localhost:5000/service${serviceId}`
+    const url = `https://serene-reaches-38236.herokuapp.com/service${serviceId}`
     fetch(url,{
         method:'PUT',
         headers:{

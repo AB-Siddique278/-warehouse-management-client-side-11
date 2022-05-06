@@ -7,7 +7,7 @@ const UpdateItems = () => {
     const [service, setService] = useState({});
     useEffect(() => {
 
-        const url = `http://localhost:5000/service${serviceId}`
+        const url = `https://serene-reaches-38236.herokuapp.com/service${serviceId}`
         fetch(url)
             .then(response => response.json())
             .then(data => setService(data))

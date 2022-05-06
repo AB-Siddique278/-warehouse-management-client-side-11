@@ -31,12 +31,10 @@ const Login = () => {
     }
 
 
-    const handleSignInUser = async event => {
+    const handleSignInUser = event => {
         event.preventDefault();
-       await signInWithEmailAndPassword(email, password)
-       const {data} = await axios.post('http://localhost:5000/login', {email});
-       localStorage.getItem('accessToken', data.accessToken);
-       //navigate(from, { replace: true });
+        signInWithEmailAndPassword(email, password)
+       
     }
     
     const handlepass=()=>{
