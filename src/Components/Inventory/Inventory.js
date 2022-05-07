@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import './Inventory.css'
 
 const Inventory = () => {
     const { serviceId } = useParams();
@@ -80,9 +81,9 @@ const Inventory = () => {
         event.preventDefault();
         const quantity = event.target.quantity;
 
-        const newQuantity = parseInt(quantity - 1);
+        const newQuantity = parseInt(quantity)-1;
         //  const myQuantaty = quantity-1;
-        const items = { newQuantity };
+        const items = {newQuantity};
 
         const url = `https://serene-reaches-38236.herokuapp.com/service${serviceId}`
         fetch(url, {
@@ -95,7 +96,7 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('users added successfully!!');
+                alert('Delivery successful..!! and Relode for Updates');
                 event.target.reset();
             })
     }
@@ -143,8 +144,8 @@ const Inventory = () => {
                 <form onSubmit={handelUpdate} >
 
 
-                    <input type="number" name='quantity' placeholder='Update Quantity' required />
-                    <input type="submit" value="update Items" />
+                    <input className='input' type="number" name='quantity' placeholder='Update Quantity' required />
+                    <input className='quantitybutton' type="submit" value="update Items" />
                 </form>
             </div>
 
@@ -153,7 +154,7 @@ const Inventory = () => {
 
             <div className='d-flex justify-content-center mb-4'>
                 <form onSubmit={handelDelevery}>
-                    <input type="submit" value="Delevery" />
+                    <input className='deleverybutton'  type="submit" value="Delevery" />
                 </form>
             </div>
 

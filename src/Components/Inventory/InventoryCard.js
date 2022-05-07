@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { Link, useNavigate,} from 'react-router-dom';
 
 const InventoryCard = ({inventor}) => {
-    const {name, _id, picture, detail, price, }= inventor;
+    const {name, _id, picture, detail, price, quantity, sname }= inventor;
     const navigate = useNavigate();
 
     const navigateToServiceDetail = _id =>{
@@ -18,10 +18,12 @@ const InventoryCard = ({inventor}) => {
                 <div className="card h-100">
                     <img src={picture} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title">{name}</h5>
+                        <h5 className="card-title">Name: {name}</h5>
                         
-                        <h5>price:$ {price}</h5>
-                        <p className="card-text">{detail}</p>
+                        <h6>price:$ {price} / kg</h6>
+                        <h6>Quantity: {quantity} kg</h6>
+                        <h6>Supplier Name: {sname}</h6>
+                        <p className="card-text">Details: {detail}</p>
 
 
 

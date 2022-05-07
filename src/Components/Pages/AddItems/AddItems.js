@@ -72,7 +72,7 @@ const AddItems = () => {
                 <input className='mb-2' placeholder='Photo url'  {...register("picture")} />
 
 
-                <input className='mb-2' placeholder='User Email ' value={user.email}  {...register("email")} />
+                <input className='mb-2' placeholder='User Email ' value={user.email}  {...register("email")} readOnly/>
 
 
                 <input className='mb-2' placeholder=''  type="submit" />

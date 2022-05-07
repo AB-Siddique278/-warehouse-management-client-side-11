@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import useServices from '../../Hooks/useServices';
 
 const MyItemsCards = ({ myitem }) => {
-    const { name, _id, picture, detail, price, } = myitem;
+    const { name, _id, picture, detail, price, quantity, sname } = myitem;
 
     const [services, setServices] = useServices();
 
@@ -36,9 +36,12 @@ const MyItemsCards = ({ myitem }) => {
                 <div className="card h-100">
                     <img src={picture} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title">{name}</h5>
-                        <h5>price:$ {price}</h5>
-                        <p className="card-text">{detail}</p>
+                        <h5 className="card-title">Name: {name}</h5>
+                        <h6>price:$ {price}</h6>
+                        <h6>quantity {quantity}</h6>
+                        <h6>Supplier Name : {sname} </h6>
+
+                        <p className="card-text"> Details: {detail}</p>
 
 
 

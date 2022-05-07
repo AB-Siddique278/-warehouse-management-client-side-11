@@ -24,13 +24,13 @@ const MyItems = () => {
     
     return (
         <div>
-            <h1> your items : {myitems.length}</h1>
+            <h5 className='text-center my-3'>{myitems.length} Items you have added</h5>
 
             <section>
-                <h2 className='text-center my-5'> Inventory</h2>
+                <h4 className='text-center my-3'>Your Items</h4>
 
                 <div className='container'>
-                    <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center my-5'>
+                    <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center my-3'>
 
                         {
                             myitems.map(myitem => (

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './SocialLogin.css'
 const SocialLogin = () => {
@@ -8,6 +8,20 @@ const SocialLogin = () => {
     const [user]=useAuthState(auth);
     const navigate = useNavigate();
     let errorElement;
+
+
+   
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+
+
+
+
+
+
+
+
 
     if (error) {
         
@@ -23,8 +37,13 @@ const SocialLogin = () => {
 
 
 
-        if(user){
-            navigate('/');
+        // if(user){
+        //     navigate('/');
+        // }
+
+
+        if (user) {
+            navigate(from, { replace: true });
         }
     
 
@@ -36,6 +55,12 @@ const SocialLogin = () => {
         return <p>Loading...</p>;
     }
    
+    
+
+
+
+
+
     return (
         <div>
             {errorElement}
