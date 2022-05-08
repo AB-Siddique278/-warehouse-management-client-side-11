@@ -7,10 +7,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 
-
 const SignUp = () => {
-
-
 
 
     const [email, setEmail] = useState('');

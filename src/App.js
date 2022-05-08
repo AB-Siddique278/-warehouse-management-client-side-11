@@ -30,9 +30,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/additems" element={<AddItems />} />
 
-        {/* <Route path="/manageInventory" element={<ManageInventory />} /> */}
-
-
         <Route path="/inventory/:serviceId" element={
           <RequireAuth>
             <Inventory></Inventory>
@@ -60,13 +57,8 @@ function App() {
 
        
 
-
-
     <Route path="/updateItems/:serviceId" element={<UpdateItems />} />
-    {/* <Route path="/myitems" element={<MyItems />} /> */}
-
-
-
+  
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
 

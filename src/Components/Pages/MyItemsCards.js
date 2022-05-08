@@ -25,8 +25,6 @@ const MyItemsCards = ({ myitem }) => {
 
         }
 
-
-
     }
     return (
         <div>
@@ -43,29 +41,13 @@ const MyItemsCards = ({ myitem }) => {
 
                         <p className="card-text"> Details: {detail}</p>
 
-
-
-
-
-
-
                         <button className='btn btn-danger' onClick={() => handleDelete(myitem._id)}>Remove</button>
-
-
 
                     </div>
 
                 </div>
 
             </div>
-
-
-
-
-
-
-
-
 
         </div>
     );

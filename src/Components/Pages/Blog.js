@@ -175,9 +175,6 @@ const Blog = () => {
 
 
 
-
-
-
             </div>
         </div>
     );

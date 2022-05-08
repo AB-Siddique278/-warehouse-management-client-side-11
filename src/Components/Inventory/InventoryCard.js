@@ -10,8 +10,6 @@ const InventoryCard = ({inventor}) => {
         navigate(`/inventory/${_id}`);
     }
     
-  
-    
     return (
         <div>
             <div className="col">
@@ -25,21 +23,8 @@ const InventoryCard = ({inventor}) => {
                         <h6>Supplier Name: {sname}</h6>
                         <p className="card-text">Details: {detail}</p>
 
-
-
-
-                        {/* <Link to="/inventory">
-                        
-                        
-                        
-                        </Link>  */}
-                        
-
                         <Button variant="primary" onClick={() => navigateToServiceDetail(_id)} >Update Inventory</Button>
 
-                        {/* onClick={() => navigateToServiceDetail(_id)}   */}
-
-                        
                     </div>
 
                 </div>

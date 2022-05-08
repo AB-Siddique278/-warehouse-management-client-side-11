@@ -8,19 +8,8 @@ const SocialLogin = () => {
     const [user]=useAuthState(auth);
     const navigate = useNavigate();
     let errorElement;
-
-
-   
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-
-
-
-
-
-
-
-
 
 
     if (error) {
@@ -35,19 +24,10 @@ const SocialLogin = () => {
 
     useEffect(()=>{
 
-
-
-        // if(user){
-        //     navigate('/');
-        // }
-
-
         if (user) {
             navigate(from, { replace: true });
         }
     
-
-
     },[user])
 
 
@@ -56,11 +36,6 @@ const SocialLogin = () => {
     }
    
     
-
-
-
-
-
     return (
         <div>
             {errorElement}
@@ -79,18 +54,6 @@ const SocialLogin = () => {
                     </div>
                 </div>
             </button>
-
-
-
-
-
-
-
-
-
-
-
-
 
         </div>
     );

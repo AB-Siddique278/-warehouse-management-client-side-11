@@ -15,12 +15,6 @@ const UpdateItems = () => {
     }, [])
 
 
-
-
-
-
-
-
     return (
         <div>
             <h1> Hi this is a update items </h1>

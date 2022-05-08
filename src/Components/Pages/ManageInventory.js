@@ -57,17 +57,10 @@ const ManageInventory = () => {
 
                             </AllItems>))
 
-
-
-
-
                     }
 
                 </div>
             </div>
-
-
-
 
 
 
@@ -77,23 +70,3 @@ const ManageInventory = () => {
 
 export default ManageInventory;
 
-
-
-
-{/* <div key={serviceItem._id}>
-                        <h5> {serviceItem.name} <button onClick={() => handleDelete(serviceItem._id)}>Remove</button> </h5>
-
-
-                        <AllItems
-                        
-                        serviceItem={serviceItem}
-                        
-                        
-                        >
-
-
-                        </AllItems>
-
-
-
-                    </div> */}

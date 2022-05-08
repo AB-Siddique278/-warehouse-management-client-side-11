@@ -25,18 +25,12 @@ const AllItems = ({ serviceItem }) => {
 
         }
 
-        //deletedCount
 
     }
 
 
-
     return (
         <div>
-
-
-
-
 
             <div className="col">
                 <div className="card h-100">
@@ -48,12 +42,6 @@ const AllItems = ({ serviceItem }) => {
                         <h6>Supplier Name : {sname} </h6>
                         <p className="card-text">Details: {detail}</p>
 
-
-
-
-
-
-
                         <button className='btn btn-danger' onClick={() => handleDelete(serviceItem._id)}>Remove</button>
 
 
@@ -63,16 +51,6 @@ const AllItems = ({ serviceItem }) => {
                 </div>
 
             </div>
-
-
-
-
-
-
-
-
-
-
 
         </div>
     );

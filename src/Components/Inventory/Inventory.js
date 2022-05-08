@@ -37,46 +37,6 @@ const Inventory = () => {
             })
     }
 
-
-
-    //delevery button
-    //    const handleDelivered = (event) =>{
-    //     event.preventDefault();
-    //     const quantity=event.target.quantity.value;
-
-    //     const newQuantity = parseInt(quantity);
-    //     const myQuantaty = quantity-1;
-    //     const makequantity = {myQuantaty}
-    //     console.log(makequantity);
-
-
-    //     const url = `https://serene-reaches-38236.herokuapp.com/service${serviceId}`
-    //     fetch(url,{
-    //         method:'PUT',
-    //         headers:{
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(makequantity)
-    //     })
-    //     .then(res => res.json())
-    //     .then(data  =>{
-    //         console.log('success', data);
-    //         alert('update quantay');
-    //         event.target.reset();
-    //     })
-
-
-
-    //    }
-
-
-
-
-
-
-
-
-
     const handelDelevery = event => {
         event.preventDefault();
         const quantity = event.target.quantity;
@@ -102,22 +62,6 @@ const Inventory = () => {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return (
         <div>
            
@@ -133,10 +77,6 @@ const Inventory = () => {
 
                 </div>
             </div>
-
-
-
-
 
 
 
@@ -157,12 +97,6 @@ const Inventory = () => {
                     <input className='deleverybutton'  type="submit" value="Delevery" />
                 </form>
             </div>
-
-
-
-
-
-
 
         </div>
     );

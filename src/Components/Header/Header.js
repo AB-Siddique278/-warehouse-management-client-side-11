@@ -21,10 +21,7 @@ const Header = () => {
                            
 
                             <Customlink to="/blog">Blogs</Customlink>
-                            
-                            
-
-                            
+                                                    
 
 
                             {

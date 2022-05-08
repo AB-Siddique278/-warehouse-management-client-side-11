@@ -19,11 +19,6 @@ const Home = () => {
 
     }, [])
 
-
-
-
-
-
     var settings = {
         dots: true,
         infinite: true,
@@ -31,18 +26,6 @@ const Home = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
-
-
-
-
-
-
-
-
-
-
-
-
 
     return (
         <div >
@@ -80,7 +63,7 @@ const Home = () => {
             </div>
 
             <section>
-                <h2 className='text-center my-5'> Inventory</h2>
+                <h2 className='text-center my-5'> Our Productes </h2>
 
                 <div className='container'>
                     <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center my-5'>
@@ -102,10 +85,7 @@ const Home = () => {
                 </div>
 
 
-
             </section>
-
-
 
 
             <section className='container mb-5'>
@@ -157,11 +137,7 @@ const Home = () => {
                 </div>
 
 
-
-
             </section>
-
-
 
 
             <div className='mb-5'>
@@ -219,15 +195,6 @@ const Home = () => {
                 
 
             </div>
-
-
-
-
-
-
-                      
-
-
 
 
         </div>

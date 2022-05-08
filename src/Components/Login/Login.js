@@ -95,12 +95,7 @@ const Login = () => {
                         </p>
                         <hr />
 
-
-
                         <SocialLogin></SocialLogin>
-
-
-
 
                     </div>
 

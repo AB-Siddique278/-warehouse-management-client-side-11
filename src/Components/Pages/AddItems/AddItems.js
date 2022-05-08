@@ -6,39 +6,7 @@ import auth from '../../../firebase.init';
 import useItemDetail from '../../../Hooks/useItemDetail';
 const AddItems = () => {
     const { register, handleSubmit, } = useForm();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const {serviceId}= useParams()
-    // const [service] = useItemDetail(serviceId)
     const [user] = useAuthState(auth);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     const onSubmit = data => {
@@ -78,8 +46,6 @@ const AddItems = () => {
                 <input className='mb-2' placeholder=''  type="submit" />
             </form>
 
-
-            
 
         </div>
     );

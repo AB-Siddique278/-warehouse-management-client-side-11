@@ -48,13 +48,7 @@ const MyItems = () => {
                     </div>
                 </div>
 
-
-
             </section>
-
-
-
-
 
         </div>
     );
