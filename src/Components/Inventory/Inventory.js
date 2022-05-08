@@ -32,7 +32,7 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('users added successfully!!');
+                alert('Delivery Update successfully!!...And Relode');
                 event.target.reset();
             })
     }
@@ -69,9 +69,9 @@ const Inventory = () => {
                 <img src={service.picture} alt="" />
                 <div class="card-body">
                     <h5 class="card-title">Name : {service.name}</h5>
-                    <h6 class="card-title">Price :$ {service.price}</h6>
-                    <h6 class="card-title">Sname :$ {service.sname}</h6>
-                    <h6 class="card-text">Quantity: {service.quantity}</h6>
+                    <h6 class="card-title">Price :$ {service.price} / kg</h6>
+                    <h6 class="card-text">Quantity: {service.quantity} kg</h6>
+                    <h6 class="card-title">Supplier Name : {service.sname}</h6>
                     <p class="card-text">Details: {service.detail}</p>
 
 

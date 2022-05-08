@@ -37,8 +37,8 @@ const AllItems = ({ serviceItem }) => {
                     <img src={picture} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">Name: {name}</h5>
-                        <h6>Price: $ {price}</h6>
-                        <h6>Quantity: {quantity}</h6>
+                        <h6>Price: $ {price} / kg</h6>
+                        <h6>Quantity: {quantity} kg</h6>
                         <h6>Supplier Name : {sname} </h6>
                         <p className="card-text">Details: {detail}</p>
 
@@ -57,3 +57,8 @@ const AllItems = ({ serviceItem }) => {
 };
 
 export default AllItems;
+
+
+
+
+

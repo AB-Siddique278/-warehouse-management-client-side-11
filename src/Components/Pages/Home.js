@@ -63,7 +63,7 @@ const Home = () => {
             </div>
 
             <section>
-                <h2 className='text-center my-5'> Our Productes </h2>
+                <h3 className='text-center my-5'> Our Productes </h3>
 
                 <div className='container'>
                     <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center my-5'>
@@ -90,7 +90,7 @@ const Home = () => {
 
             <section className='container mb-5'>
 
-                <h1 className='text-center'>Other Services </h1>
+                <h3 className='text-center'>Other Services </h3>
 
 
                 <div class="row row-cols-1 row-cols-md-4 g-4">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useServices from '../../Hooks/useServices';
 import AllItems from './AllItems';
+import './ManageInventory.css'
 
 const ManageInventory = () => {
 
@@ -34,7 +35,7 @@ const ManageInventory = () => {
             <h1 className='text-center'>All of Items</h1>
             <div className=' d-flex justify-content-center'>
 
-                <button className='btn btn-info'  >
+                <button className='btn btn-primary addlink'  >
 
                     <Link to="/additems"> Add Items </Link>
                 </button>

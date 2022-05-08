@@ -36,7 +36,7 @@ const Header = () => {
 
                             {
                                 user ?
-                                    <button onClick={handleSignOut} className="btn btn-warning bt">Sign out</button>
+                                    <button onClick={handleSignOut} className="btn btn-primary bt">Sign out</button>
                                     :
                                     <Customlink to="/login">Login</Customlink>
                             }

@@ -8,7 +8,6 @@ const AddItems = () => {
     const { register, handleSubmit, } = useForm();
     const [user] = useAuthState(auth);
 
-
     const onSubmit = data => {
         console.log(data)
         const url = `https://serene-reaches-38236.herokuapp.com/service`;
@@ -24,15 +23,18 @@ const AddItems = () => {
         .then(result =>{
             console.log(result);
         })
-    
+
     
     };
+
+
+    
     return (
-        <div className='w-50 mx-auto'>
+        <div className='w-50 mx-auto mb-5'>
             <h1>Please add New items</h1>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 
-                <input className='mb-2' placeholder='Name'   {...register("name", { required: true, maxLength: 20 })} />
+                <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
                 <input className='mb-2' placeholder='Supply Name'  {...register("sname")} />
                 <input className='mb-2' placeholder='Price'  type="number" {...register("price",)} />
                 <input className='mb-2' placeholder='Quantity'  type="number" {...register("quantity",)} />
